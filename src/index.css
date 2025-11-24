@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    color: #E5E5E5;
+    background-color: #0F0F0F;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at top, rgba(212, 175, 55, 0.1), #0F0F0F 50%);
+    color: #E5E5E5;
+  }
+
+  ::selection {
+    background: rgba(212, 175, 55, 0.35);
+    color: #F5F0E8;
+  }
+
+}
+
+* {
+  cursor: default !important;
+}
+
+@layer components {
+  .btn-luxe {
+    @apply inline-flex items-center justify-center rounded-full border border-gold/70 px-7 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-cream transition;
+    box-shadow: 0 0 0 1px rgba(212, 175, 55, 0.4), inset 0 0 0 1px rgba(245, 240, 232, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+  }
+
+  .btn-luxe:hover {
+    @apply bg-gold text-night shadow-[0_15px_35px_rgba(0,0,0,0.35)] scale-[1.02];
+  }
+
+  .btn-luxe:focus-visible {
+    @apply outline-none ring-2 ring-offset-2 ring-gold/60 ring-offset-night;
+  }
+
+  .glass-elevated {
+    @apply rounded-[32px] border border-white/10 bg-white/5 shadow-[0_20px_60px_rgba(0,0,0,0.45)] backdrop-blur-3xl;
+  }
+
+  .noise-overlay {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.09) 1px, transparent 1px);
+    background-size: 6px 6px;
+  }
+
+  .section-heading {
+    @apply font-display text-4xl text-cream;
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease forwards;
+}
+
+.floating-bean {
+  animation: beanFloat 8s ease-in-out infinite;
+}
+
+@keyframes beanFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-25px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes pulseLine {
+  0% {
+    stroke-dashoffset: 290;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.preloader-path {
+  stroke-dasharray: 290;
+  animation: pulseLine 2.2s ease-in-out infinite;
+}
+
+.reveal-element {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
