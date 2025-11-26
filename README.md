@@ -11,6 +11,9 @@ Urban Brew Café is a modern and responsive café website designed in Figma and 
 - Semantic HTML + reusable components
 - Built with React + Vite + Tailwind CSS
 
+### Live Site (Vercel)
+- Deployed app: https://urban-brew-cafe-me5w58dp3-dehannimnasandadiyas-projects.vercel.app/
+
 ### Design File (Figma)
 - Full UI/UX design: https://www.figma.com/design/02S0CfhGActJJDRvCBQitj/Urban-Brew-Cafe?node-id=0-1&m=dev&t=64LWO5VZ1VTOIZ0c-1
 
