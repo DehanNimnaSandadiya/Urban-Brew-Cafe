@@ -9,7 +9,7 @@ A modern, fully responsive website for a local café in Colombo, built from scra
 - Semantic HTML + reusable components
 - Built with React + Vite + Tailwind CSS
 
-Live: https://your-vercel-link.vercel.app  
-Design: [Figma Link Here]
+### Design File (Figma)
+- Full UI/UX design: https://www.figma.com/design/02S0CfhGActJJDRvCBQitj/Urban-Brew-Cafe?node-id=0-1&m=dev&t=64LWO5VZ1VTOIZ0c-1
 
 Built by Dehan Nimna | Nov 2025
